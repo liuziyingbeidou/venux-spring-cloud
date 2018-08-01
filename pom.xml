@@ -17,11 +17,6 @@
   <modules>
   	<module>venux-spring-cloud-eureka</module>
   	<module>venux-spring-cloud-gateway</module>
-  	
-  	
-  	
-  	
-  	
   </modules>
   
 </project>
