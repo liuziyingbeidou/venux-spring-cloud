@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property resource="logback.properties" />
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+    <jmxConfigurator/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%d [%t] %p %logger - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+	<File>${log.path}/${log.name}.log</File>
+	<encoder>
+            <pattern>%d [%t] %p %logger{90};Line:%L - %m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
+            <fileNamePattern>${log.path}/${log.name}.log.%d{yyyy-MM-dd}</fileNamePattern>   
+            <maxHistory>3</maxHistory>
+        </rollingPolicy> 
+	<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+	    <level>DEBUG</level>
+	</filter>
+    </appender>
+ 
+    <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log.path}/${log.name.error}.log</File>
+	<encoder>
+            <pattern>%d [%t] %p %logger{90};Line:%L - %m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
+            <fileNamePattern>${log.path}/${log.name.error}.log.%d{yyyy-MM-dd}</fileNamePattern>   
+            <maxHistory>3</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+    
+    <!--
+    <appender name="RemoteLog" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <remoteHost>11.10.6.135</remoteHost>
+        <port>4564</port>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+    -->
+
+    <!--<logger name="org.springframework" level="DEBUG"/>-->
+    <!--<logger name="org.apache" level="DEBUG"/>-->
+    <!--<logger name="org.mybatis.spring" level="DEBUG"/>-->
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="LogFile"/>
+        <appender-ref ref="ErrorFile"/>
+        <!--<appender-ref ref="RemoteLog"/>-->
+    </root>
+</configuration>
