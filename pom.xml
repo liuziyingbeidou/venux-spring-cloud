@@ -20,6 +20,7 @@
 		<module>venux-spring-cloud-eureka</module>
 		<module>venux-spring-cloud-gateway</module>
 		<module>venux-spring-cloud-api-gateway</module>
+		<module>venux-spring-boot-activiti</module>
 	</modules>
 
 	<dependencyManagement>
