@@ -1,6 +1,7 @@
 Activiti是Apache许可的业务流程管理（BPM）引擎。
 
 Spring Boot 集成Activiti Modeler
+
 1.SpringBoot 1.3.5.RELEASE + activiti 5.22.0
    在acitiviti官网下载完整包https://github.com/Activiti/Activiti/releases/tag/activiti-5.22.0
 
@@ -20,11 +21,16 @@ Spring Boot 集成Activiti Modeler
 
 8.访问路径
 通过访问http://localhost:8080/create创建一个空白的model并跳转到编辑页面
+
 在绘制流程完成后，访问http://localhost:8080/deploy?modelId=1 对该流程进行部署
+
 http://localhost:8080/start?keyName=hello 启动流程
+
 http://localhost:8080/run?processInstanceId=1 提交
 
 注意：
+
 1.org.venux.activiti.rest.editor.main.StencilsetRestResource.java中stencilset.json加载方式调整
+
 2.汉化
 	 将stencilset.json文件汉化
