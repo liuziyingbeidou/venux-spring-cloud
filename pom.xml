@@ -22,7 +22,6 @@
 		<module>venux-spring-cloud-api-gateway</module>
 		<module>venux-spring-boot-activiti</module>
 		<module>venux-spring-boot-flowable</module>
-		
 		<module>venux-spring-cloud-hystrix-dashboard</module>
 	</modules>
 
