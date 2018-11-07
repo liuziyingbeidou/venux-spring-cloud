@@ -26,6 +26,7 @@
 		<module>venux-spring-boot-fastdfs</module>
 		<module>venux-spring-cloud-config</module>
 		<module>venux-spring-boot-admin</module>
+		<module>venux-spring-boot-zipkin</module>
 	</modules>
 
 	<dependencyManagement>
