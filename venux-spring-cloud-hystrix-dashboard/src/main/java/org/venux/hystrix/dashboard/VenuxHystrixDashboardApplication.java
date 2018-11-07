@@ -4,6 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
+/**
+ * @Title: ZJS 
+ * @ClassName: VenuxHystrixDashboardApplication 
+ * @Description:  Hystrix Dashboard
+ * http://127.0.0.1:9001/hystrix/
+ * @author liuzy
+ * @date 2018年11月7日 下午3:45:05
+ */
 @SpringBootApplication
 @EnableHystrixDashboard
 public class VenuxHystrixDashboardApplication {
