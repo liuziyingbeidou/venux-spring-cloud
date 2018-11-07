@@ -24,6 +24,7 @@
 		<module>venux-spring-boot-flowable</module>
 		<module>venux-spring-cloud-hystrix-dashboard</module>
 		<module>venux-spring-boot-fastdfs</module>
+		<module>venux-spring-cloud-config</module>
 	</modules>
 
 	<dependencyManagement>
