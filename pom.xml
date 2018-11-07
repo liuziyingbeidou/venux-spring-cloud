@@ -25,6 +25,7 @@
 		<module>venux-spring-cloud-hystrix-dashboard</module>
 		<module>venux-spring-boot-fastdfs</module>
 		<module>venux-spring-cloud-config</module>
+		<module>venux-spring-boot-admin</module>
 	</modules>
 
 	<dependencyManagement>
