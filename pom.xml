@@ -27,6 +27,12 @@
 		<module>venux-spring-cloud-config</module>
 		<module>venux-spring-boot-admin</module>
 		<module>venux-spring-boot-zipkin</module>
+
+
+
+		
+		<module>venux-spring-cloud-stream-provider</module>
+		<module>venux-spring-cloud-stream-consumer</module>
 	</modules>
 
 	<dependencyManagement>
