@@ -2,12 +2,16 @@ package com.venux.provider.rabbitMQ.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.InboundChannelAdapter;
 import org.springframework.integration.annotation.Poller;
 import org.springframework.integration.core.MessageSource;
+import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.GenericMessage;
 
 import com.venux.provider.rabbitMQ.service.SendMsg;
@@ -25,6 +29,15 @@ public class SendMsgImpl implements SendMsg {
 	public MessageSource<Integer> timerMessageSource() {
 		logger.info("发送消息："+i++);
 		return () -> new GenericMessage<>(i++);
+	}
+
+	@Autowired
+	@Qualifier(value=Source.OUTPUT)
+    private MessageChannel output;
+	
+	@Override
+	public boolean NotAutoMessageSource(String msg) {
+		return output.send(MessageBuilder.withPayload(msg).build());
 	}
 
 }

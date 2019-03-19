@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+          outputDefault:
+            destination: jobs
+          inputDefault:
+            group: group-A
+            destination: jobs
+  redis:
+    host: 127.0.0.1
+    port: 6379

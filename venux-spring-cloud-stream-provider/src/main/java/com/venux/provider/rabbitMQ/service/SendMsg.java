@@ -5,4 +5,6 @@ import org.springframework.integration.core.MessageSource;
 public interface SendMsg {
 
 	public MessageSource<Integer> timerMessageSource();
+	
+	public boolean NotAutoMessageSource(String msg);
 }
