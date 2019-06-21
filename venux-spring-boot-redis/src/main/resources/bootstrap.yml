@@ -1,0 +1,84 @@
+server:
+  port: 2023
+
+spring:
+  application:
+    name: zredis-base-service
+  rabbitmq:
+    host: xx
+    port: 5672
+    username: user
+    password: password
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: SPRING-CLOUD-CONFIG
+      fail-fast: true
+      label: master
+  redis:
+    pool:
+      max-active: 10000
+      max-wait: 100000
+      max-idle: 100
+      min-idle: 10
+    #哨兵集群
+    #sentinel:
+      #master:  redis1
+      #nodes: xx:7000,xx:7000,xx:7000
+    timeout: 60000
+    #redis cluster集群节点
+    cluster:
+       #max-redirects: 3
+       nodes: xx:30001,xx:30002,xx:30001,xx:30002,xx:30001,xx:30002
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@xx:1521:test
+    username: bos0301
+    password: bos0301
+    initialSize: 1
+    minIdle: 2
+    maxActive: 10
+    maxWait: 1800
+    timeBetweenEvictionRunsMillis: 600000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+
+eureka:
+  client:
+    eureka-server-total-connections-per-host: 500
+    service-url:
+      defaultZone: http://xx:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+
+#hystrix超时熔断配置
+hystrix:
+  threadpool:
+    default:
+      coreSize: 10
+      maxQueueSize: 200
+      queueSizeRejectionThreshold: 50
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    cache:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
+#日志
+logging:
+  file: /data/logs/zredis-base-service/zredis-base-service.log
+  
+#外部接口
+interface:
+  notifySubscribeApi: /service/sync/keyword?rediskey={rediskey}
