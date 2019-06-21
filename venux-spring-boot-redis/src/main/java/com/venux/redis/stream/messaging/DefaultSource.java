@@ -6,7 +6,6 @@ import org.xnio.channels.MessageChannel;
 import com.venux.redis.stream.StreamConstant;
 
 /**
- * @Title: ZJS 
  * @ClassName: DefaultSource 
  * @Description: ZRedis中间件默认输出流
  * @author liuzy

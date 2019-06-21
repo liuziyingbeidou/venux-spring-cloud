@@ -2,7 +2,6 @@ package com.venux.redis.dto;
 
 
 /** 
- * @Title: ZJS 
  * @ClassName: ConsumerDto 
  * @Description: 订阅消费
  * @author liuzy

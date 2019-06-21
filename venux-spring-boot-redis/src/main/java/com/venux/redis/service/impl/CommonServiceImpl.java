@@ -22,7 +22,6 @@ import com.venux.redis.service.CommonService;
 import com.venux.redis.utils.PubUtils;
 
 /** 
- * @Title: ZJS 
  * @ClassName: CommonServiceImpl 
  * @Description: 公共服务实现
  * @author liuzy

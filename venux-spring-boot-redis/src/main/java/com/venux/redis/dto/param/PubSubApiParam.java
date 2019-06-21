@@ -3,7 +3,6 @@ package com.venux.redis.dto.param;
 import io.swagger.annotations.ApiModelProperty;
 
 /** 
- * @Title: ZJS 
  * @ClassName: PubSubApiParam 
  * @Description: 缓存发布消息参数
  * @author liuzy

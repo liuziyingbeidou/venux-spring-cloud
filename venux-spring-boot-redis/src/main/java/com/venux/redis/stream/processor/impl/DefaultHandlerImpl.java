@@ -15,7 +15,6 @@ import com.venux.redis.stream.messaging.DefaultSource;
 import com.venux.redis.stream.processor.DefaultHandler;
 
 /** 
- * @Title: ZJS 
  * @ClassName: DefaultHandlerImpl 
  * @Description: 输入输出流处理
  * @author liuzy

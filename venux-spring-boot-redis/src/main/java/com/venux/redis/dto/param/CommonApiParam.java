@@ -3,7 +3,6 @@ package com.venux.redis.dto.param;
 import io.swagger.annotations.ApiModelProperty;
 
 /** 
- * @Title: ZJS 
  * @ClassName: CommonApiParam 
  * @Description: 用于转换
  * @author liuzy

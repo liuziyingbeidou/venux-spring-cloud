@@ -5,7 +5,6 @@ import java.util.List;
 import com.venux.redis.dto.ConsumerDto;
 
 /** 
- * @Title: ZJS 
  * @ClassName: ConsumerService 
  * @Description: 订阅服务
  * @author liuzy

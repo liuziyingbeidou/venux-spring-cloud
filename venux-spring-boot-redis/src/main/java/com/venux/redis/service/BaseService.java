@@ -3,7 +3,6 @@ package com.venux.redis.service;
 import com.venux.redis.dto.param.BaseApiParam;
 
 /** 
- * @Title: ZJS 
  * @ClassName: ZjsRedisOperations 
  * @Description: Redis操作模板类接口
  * @author liuzy

@@ -6,7 +6,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /** 
- * @Title: ZJS 
  * @ClassName: DistlockApiParam 
  * @Description: 接口参数
  * @author liuzy

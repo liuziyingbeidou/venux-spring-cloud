@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.cloud.client.ServiceInstance;
 
 /** 
- * @Title: ZJS 
  * @ClassName: CommonService 
  * @Description: 公共服务
  * @author liuzy

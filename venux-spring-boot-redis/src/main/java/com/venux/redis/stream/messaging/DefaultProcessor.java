@@ -1,7 +1,6 @@
 package com.venux.redis.stream.messaging;
 
 /**
- * @Title: ZJS 
  * @ClassName: DefaultProcessor 
  * @Description: ZRedis中间件自定义输入输出流
  * @author liuzy

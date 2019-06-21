@@ -6,7 +6,6 @@ import org.springframework.messaging.SubscribableChannel;
 import com.venux.redis.stream.StreamConstant;
 
 /**
- * @Title: ZJS 
  * @ClassName: DefaultSink 
  * @Description: ZRedis中间件默认输入流
  * @author liuzy

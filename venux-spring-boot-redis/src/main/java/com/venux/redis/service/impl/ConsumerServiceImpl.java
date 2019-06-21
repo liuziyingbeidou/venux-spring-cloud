@@ -15,7 +15,6 @@ import com.venux.redis.dto.ConsumerDto;
 import com.venux.redis.service.ConsumerService;
 
 /** 
- * @Title: ZJS 
  * @ClassName: ConsumerServiceImpl 
  * @Description: 订阅服务
  * @author liuzy

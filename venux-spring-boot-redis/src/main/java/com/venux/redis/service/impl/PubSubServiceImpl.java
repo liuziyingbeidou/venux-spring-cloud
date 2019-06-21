@@ -9,7 +9,6 @@ import com.venux.redis.dao.RedisServiceDao;
 import com.venux.redis.service.PubSubService;
 
 /** 
- * @Title: ZJS 
  * @ClassName: PubSubServiceImpl 
  * @Description:  发布订阅
  * @author liuzy
