@@ -1,13 +1,15 @@
-package org.venux.spring.cloud.gateway;
+package org.venux;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+@EnableEurekaClient
+@SpringBootApplication
+public class GatewayApp 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello Gateway!" );
+        SpringApplication.run(GatewayApp.class, args);
     }
 }
